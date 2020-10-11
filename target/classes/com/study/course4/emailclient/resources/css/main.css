@@ -1,0 +1,11 @@
+.start_menu_button {
+
+}
+
+.start_menu_input {
+    -fx-border-style: none;
+}
+
+.start_menu_left_background {
+    -fx-background-color: linear-gradient(to bottom left, #011C9B, #4178EF);
+}
