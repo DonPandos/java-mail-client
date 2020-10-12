@@ -1,5 +1,5 @@
 .start_menu_button {
-
+    -fx-background-color: linear-gradient(to bottom left, #011C9B, #4178EF);
 }
 
 .start_menu_input {
