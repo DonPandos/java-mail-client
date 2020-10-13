@@ -3,12 +3,16 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.study.course4.emailclient.controller.MainFormController">
    <children>
-      <AnchorPane prefWidth="157.0">
+      <AnchorPane prefWidth="200.0">
          <children>
             <JFXListView fx:id="foldersListView" prefWidth="200.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" prefHeight="600.0">
+         <children>
+            <JFXListView fx:id="mailsListView" prefHeight="600.0" prefWidth="900.0" />
          </children>
       </AnchorPane>
    </children>
