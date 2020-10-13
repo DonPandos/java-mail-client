@@ -36,31 +36,32 @@ public class TestH {
 
 
         //
-//        Properties props = new Properties();
-//        props.put("mail.debug", "false");
-//        props.put("mail.store.protocol", "imaps");
-//        props.put("mail.imap.ssl.enable", "true");
-//        props.put("mail.imap.port", 993);
-//
-//        Authenticator auth = new EmailAuthenticator("ewrr_96@mail.ru", "ch1nk1603ch1nk1603");
-//        Session session = Session.getDefaultInstance(props, auth);
-//        session.setDebug(false);
-//        try {
-//            Store store = session.getStore();
-//
-//            store.connect("imap.mail.ru", "ewrr_96@mail.ru", "ch1nk1603ch1nk1603");
-//
-//            Folder inbox = store.getFolder("INBOX");
-//            inbox.open(Folder.READ_ONLY);
-//
-//
-//            Message[] messages = inbox.getMessages(); // refreshed
-//
-//            System.out.println(messages[messages.length - 1].getSubject());
-//        } catch (NoSuchProviderException e) {
-//            e.printStackTrace();
-//        } catch (MessagingException e) {
-//            e.printStackTrace();
-//        }
+        Properties props = new Properties();
+        props.put("mail.debug", "false");
+        props.put("mail.store.protocol", "imaps");
+        props.put("mail.imap.ssl.enable", "true");
+        props.put("mail.imap.port", 993);
+
+        Authenticator auth = new EmailAuthenticator("ewrr_96@mail.ru", "ch1nk1603ch1nk1603");
+        Session session = Session.getDefaultInstance(props, auth);
+        session.setDebug(false);
+        try {
+            Store store = session.getStore();
+
+            store.connect("imap.mail.ru", "ewrr_96@mail.ru", "ch1nk1603ch1nk1603");
+
+
+            Folder inbox = store.getFolder("Отправленные");
+            inbox.open(Folder.READ_ONLY);
+
+
+            Message[] messages = inbox.getMessages(); // refreshed
+
+            System.out.println(messages[messages.length - 12].getSubject());
+        } catch (NoSuchProviderException e) {
+            e.printStackTrace();
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
     }
 }

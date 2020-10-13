@@ -3,8 +3,7 @@ package com.study.course4.emailclient.mail;
 
 import lombok.Data;
 
-import javax.mail.Authenticator;
-import javax.mail.Session;
+import javax.mail.*;
 import java.util.Properties;
 
 @Data
@@ -22,7 +21,7 @@ public class MailSession {
         this.password = password;
     }
 
-    public Session getSession(){
+    public Store getStore() throws MessagingException {
         Properties props = new Properties();
         props.put("mail.debug", "false");
         props.put("mail.store.protocol", "imaps");
@@ -32,6 +31,8 @@ public class MailSession {
         Authenticator auth = new EmailAuthenticator(email, password);
         Session session = Session.getDefaultInstance(props, auth);
         session.setDebug(false);
-        return session;
+        Store store = session.getStore();
+        store.connect("imap.mail.ru", email, password);
+        return store;
     }
 }
