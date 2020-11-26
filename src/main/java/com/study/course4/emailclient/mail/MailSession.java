@@ -2,8 +2,11 @@ package com.study.course4.emailclient.mail;
 
 
 import lombok.Data;
+import lombok.SneakyThrows;
 
 import javax.mail.*;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 @Data
@@ -11,17 +14,19 @@ public class MailSession {
 
     private String email;
     private String password;
-
+    private Map<String, String> folderNames;
+    private Map<String, Folder> folders;
+    private Store store;
     public MailSession(){
 
     }
 
-    public MailSession(String email, String password){
+    @SneakyThrows
+    public MailSession(String email, String password, Map<String, String> folderNames) {
         this.email = email;
         this.password = password;
-    }
+        this.folderNames = folderNames;
 
-    public Store getStore() throws MessagingException {
         Properties props = new Properties();
         props.put("mail.debug", "false");
         props.put("mail.store.protocol", "imaps");
@@ -33,6 +38,18 @@ public class MailSession {
         session.setDebug(false);
         Store store = session.getStore();
         store.connect("imap.mail.ru", email, password);
-        return store;
+
+        folders = new HashMap<>();
+        folders.put("inbox", store.getFolder(folderNames.get("inbox")));
+        folders.put("sent", store.getFolder(folderNames.get("sent")));
+        folders.put("trash", store.getFolder(folderNames.get("trash")));
+        folders.put("drafts", store.getFolder(folderNames.get("drafts")));
+        for(Folder folder : folders.values()) {
+            folder.open(Folder.READ_ONLY);
+        }
+    }
+
+    public Folder getFolder(String folderName) {
+        return folders.get(folderName);
     }
 }

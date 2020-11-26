@@ -12,6 +12,6 @@ public class Mail {
     String fromName;
     String fromEmail;
     String subject;
-    String text;
+    String content;
     Date date;
 }

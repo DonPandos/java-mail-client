@@ -34,7 +34,7 @@ public class JavaFxApplication extends Application {
         Parent root = fxWeaver.loadView(StartMenuController.class);
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.initStyle(StageStyle.UNDECORATED);
+        //stage.initStyle(StageStyle.UNDECORATED);
         stage.show();
     }
 }

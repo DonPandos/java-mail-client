@@ -10,6 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Random;
 
 public class MailListViewCell extends ListCell<Mail> {
@@ -56,12 +57,13 @@ public class MailListViewCell extends ListCell<Mail> {
             }
             Random rand = new Random();
             letterCircle.setFill(Color.rgb(rand.nextInt(255) + 1, rand.nextInt(255) + 1, rand.nextInt(255) + 1));
-            if(mail.getFromName().length() != 0) circleLetter.setText(String.valueOf(mail.getFromName().toUpperCase().charAt(0)));
+            if(mail.getFromName() != null && mail.getFromName().length() != 0) circleLetter.setText(String.valueOf(mail.getFromName().toUpperCase().charAt(0)));
             else circleLetter.setText(String.valueOf(mail.getFromEmail().toUpperCase().charAt(0)));
             fromNameLabel.setText(mail.getFromName());
             subjectLabel.setText(mail.getSubject());
-            messageLabel.setText(mail.getText());
-            dateLabel.setText(mail.getDate().toString());
+            messageLabel.setText(mail.getContent());
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd 'в' HH:mm:ss z");
+            dateLabel.setText(mail.getDate()  == null ? "No info" : dateFormat.format(mail.getDate()));
         }
 
         setText(null);

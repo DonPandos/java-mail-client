@@ -76,15 +76,13 @@ public class StartMenuController implements Initializable {
         String password = passwordTextField.getText();
 
         mailSession = context.getBean(MailSession.class, email, password);
-        try {
-            Store store = mailSession.getStore(); //проверка существования email адреса
-            Stage stage = ((Stage) loginButton.getScene().getWindow());
-            Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
-            stage.setScene(scene);
-            stage.show();
-        } catch (MessagingException ew) {
-            errorLabel.setText("Не верный email или пароль.\nПроверьте и введите еще раз.");
-        }
+
+        Store store = mailSession.getStore(); //проверка существования email адреса
+        Stage stage = ((Stage) loginButton.getScene().getWindow());
+        Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
+        stage.setScene(scene);
+        stage.show();
+
     }
 
     @FXML

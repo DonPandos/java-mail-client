@@ -3,13 +3,15 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.study.course4.emailclient.controller.MainFormController">
    <children>
-      <AnchorPane prefWidth="157.0">
+      <AnchorPane prefWidth="200.0">
          <children>
-            <JFXListView fx:id="foldersListView" prefWidth="200.0" />
+            <JFXListView fx:id="foldersListView" prefHeight="400.0" prefWidth="300.0" onMouseClicked="#handleFoldersListViewClick"/>
          </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainPane" layoutX="300.0" prefHeight="600.0">
+
       </AnchorPane>
    </children>
 </AnchorPane>
