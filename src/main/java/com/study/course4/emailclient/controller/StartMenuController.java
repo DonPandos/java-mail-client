@@ -16,7 +16,6 @@ import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
-import javax.mail.MessagingException;
 
 import javax.mail.Store;
 
@@ -80,6 +79,7 @@ public class StartMenuController implements Initializable {
         Store store = mailSession.getStore(); //проверка существования email адреса
         Stage stage = ((Stage) loginButton.getScene().getWindow());
         Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
+
         stage.setScene(scene);
         stage.show();
 

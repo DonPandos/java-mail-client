@@ -13,27 +13,16 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>6</source>
-                    <target>6</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-mail</artifactId>
-            <version>2.2.5.RELEASE</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
-        <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>javax.mail-api</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-
 
         <dependency>
             <groupId>net.rgielen</groupId>
@@ -79,6 +68,8 @@
             <artifactId>commons-email</artifactId>
             <version>1.5</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
 
     </dependencies>
 
