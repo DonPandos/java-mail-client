@@ -8,6 +8,8 @@ import javafx.scene.control.ListCell;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -25,9 +27,6 @@ public class MailListViewCell extends ListCell<Mail> {
 
     @FXML
     private Label subjectLabel;
-
-    @FXML
-    private Label messageLabel;
 
     @FXML
     private Label dateLabel;
@@ -61,8 +60,8 @@ public class MailListViewCell extends ListCell<Mail> {
             else circleLetter.setText(String.valueOf(mail.getFromEmail().toUpperCase().charAt(0)));
             fromNameLabel.setText(mail.getFromName());
             subjectLabel.setText(mail.getSubject());
-            messageLabel.setText(mail.getContent());
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd 'в' HH:mm:ss z");
+            if(!mail.isSeen()) subjectLabel.setFont(Font.font("Courier New", FontWeight.BOLD, 14));
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy 'в' HH:mm");
             dateLabel.setText(mail.getDate()  == null ? "No info" : dateFormat.format(mail.getDate()));
         }
 

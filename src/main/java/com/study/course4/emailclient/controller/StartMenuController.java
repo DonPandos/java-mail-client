@@ -74,14 +74,19 @@ public class StartMenuController implements Initializable {
         String email = emailTextField.getText();
         String password = passwordTextField.getText();
 
-        mailSession = context.getBean(MailSession.class, email, password);
+        try {
+            mailSession = context.getBean(MailSession.class, email, password);
+            Stage stage = ((Stage) loginButton.getScene().getWindow());
+            Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
 
-        Store store = mailSession.getStore(); //проверка существования email адреса
-        Stage stage = ((Stage) loginButton.getScene().getWindow());
-        Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
+            stage.setScene(scene);
+            stage.setMaximized(true);
+            stage.show();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            errorLabel.setText("Неверный логин или пароль");
+        }
 
-        stage.setScene(scene);
-        stage.show();
 
     }
 
@@ -94,7 +99,7 @@ public class StartMenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        emailTextField.setText("ewrr_96@mail.ru");
-        passwordTextField.setText("ch1nk1603ch1nk1603");
+        emailTextField.setText("kavun.bogdan16@gmail.com");
+        passwordTextField.setText("tipeK440");
     }
 }

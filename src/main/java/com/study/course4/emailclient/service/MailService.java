@@ -1,17 +1,20 @@
 package com.study.course4.emailclient.service;
 
 import com.study.course4.emailclient.mail.Mail;
+import lombok.Data;
 import lombok.SneakyThrows;
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.util.MimeMessageParser;
 import org.springframework.stereotype.Service;
 
+import javax.activation.DataSource;
 import javax.mail.*;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeUtility;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Arrays;
+
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class MailService {
@@ -25,16 +28,6 @@ public class MailService {
         int messageStart = (page - 1) * MAILS_COUNT_ON_PAGE + 1;
         int messagesEnd = (page * MAILS_COUNT_ON_PAGE) - 1 > folder.getMessageCount() ? folder.getMessageCount() : (page * MAILS_COUNT_ON_PAGE) - 1;
         int messageCount = folder.getMessageCount();
-        //System.out.println(new Date());
-//        List<MimeMessage> messages = Arrays.stream(folder.getMessages(messageStart, messagesEnd)).map(message -> {
-//            try {
-//                return new MimeMessage((MimeMessage) message);
-//            } catch (MessagingException e) {
-//                e.printStackTrace();
-//            }
-//            return null;
-//        }).collect(Collectors.toList()); // refreshed// }
-//        List<Message> messages = Arrays.asList((folder.getMessages(1, messagesEnd)));
         for (int i = messageCount - messageStart + 1; i >= messageCount - messagesEnd + 1; i--) {
             Mail mail = new Mail();
             MimeMessage message = (MimeMessage) folder.getMessage(i);
@@ -49,26 +42,29 @@ public class MailService {
             }
 
             if (message.getSubject() != null) mail.setSubject(MimeUtility.decodeText(message.getSubject()));
-
-//            try {
-//                mail.setContent(new MimeMessageParser(message).parse().getHtmlContent());
-//            } catch (Exception e) {
-//                mail.setContent("");
-//            }
-//            try {
-//                mail.setContent(message.getContent().toString());
-//            } catch (Exception e) {
-//                mail.setContent("");
-//            }
-            mail.setContent("123");
-            mail.setContent("");
-            System.out.println(message.getSentDate());
+            else mail.setSubject("No subject");
+            mail.setSeen(message.getFlags().contains(Flags.Flag.SEEN));
             mail.setDate(message.getSentDate());
+            mail.setNumber(i);
             mails.add(mail);
         }
 
         return mails;
 
+    }
+
+    @SneakyThrows
+    public String getMailContent(Folder folder, Integer mailNumber) {
+        MimeMessage message = (MimeMessage) folder.getMessage(mailNumber);
+        MimeMessageParser parser = new MimeMessageParser(message).parse();
+        return parser.getHtmlContent();
+    }
+
+    @SneakyThrows
+    public List<DataSource> getAttachmentFiles(Folder folder, Integer mailNumber) {
+        MimeMessage message = (MimeMessage) folder.getMessage(mailNumber);
+        MimeMessageParser parser = new MimeMessageParser(message).parse();
+        return parser.getAttachmentList();
     }
 
 

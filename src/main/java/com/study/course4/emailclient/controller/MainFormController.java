@@ -104,6 +104,7 @@ public class MainFormController implements Initializable {
                 getClass().getResource("../resources/view/mail_list.fxml")
         );
         loader.setController(mailListController);
+        mainPane.getChildren().clear();
         mainPane.getChildren().add(loader.load());
     }
 }

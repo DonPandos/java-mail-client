@@ -21,7 +21,7 @@
       </AnchorPane>
       <JFXTextField fx:id="emailTextField" layoutX="325.0" layoutY="130.0" onKeyTyped="#handleKeyTypedTextField" prefHeight="30.0" prefWidth="250.0" promptText="E-mail" styleClass="start_menu_input" />
       <JFXTextField fx:id="passwordTextField" accessibleRole="PASSWORD_FIELD" layoutX="325.0" layoutY="190.0" onKeyTyped="#handleKeyTypedTextField" prefHeight="30.0" prefWidth="250.0" promptText="Пароль" styleClass="start_menu_input" />
-      <JFXButton fx:id="loginButton" disable="true" layoutX="375.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#handleLoginButtonClicked" prefHeight="30.0" prefWidth="150.0" styleClass="start_menu_button" text="Войти" textFill="WHITE" />
+      <JFXButton fx:id="loginButton" disable="true" layoutX="375.0" layoutY="280.0" mnemonicParsing="false" onMouseClicked="#handleLoginButtonClicked" prefHeight="30.0" prefWidth="150.0" styleClass="button" text="Войти" textFill="WHITE" />
       <Label layoutX="371.0" layoutY="50.0" text="Mail-Client">
          <font>
             <Font name="Courier New" size="24.0" />

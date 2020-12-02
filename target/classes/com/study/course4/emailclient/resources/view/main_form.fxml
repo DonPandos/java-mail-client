@@ -7,10 +7,10 @@
    <children>
       <AnchorPane prefWidth="200.0">
          <children>
-            <JFXListView fx:id="foldersListView" prefHeight="400.0" prefWidth="300.0" onMouseClicked="#handleFoldersListViewClick"/>
+            <JFXListView fx:id="foldersListView" onMouseClicked="#handleFoldersListViewClick" prefWidth="300.0" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="mainPane" layoutX="300.0" prefHeight="600.0">
+      <AnchorPane fx:id="mainPane" layoutX="300.0">
 
       </AnchorPane>
    </children>
