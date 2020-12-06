@@ -15,7 +15,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.mail.*;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeMultipart;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
@@ -48,25 +51,50 @@ public class TestH {
         props.setProperty("mail.imaps.connectiontimeout", "5000");
         props.setProperty("mail.imaps.timeout", "5000");
 
-        Authenticator auth = new EmailAuthenticator("aleksey.borovikov.11@gmail.com", "sup1403f,");
+        props.setProperty("mail.smtp.auth", "true");
+        props.setProperty("mail.smtp.starttls.enable", "true");
+        props.setProperty("mail.smtp.host", "smtp.gmail.com");
+        props.setProperty("mail.smtp.port", "465");
+        props.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+        Authenticator auth = new EmailAuthenticator("kavun.bogdan16@gmail.com", "tipeK440");
         Session session = Session.getDefaultInstance(props, auth);
-        session.setDebug(false);
-        Store store = session.getStore("imaps");
-        store.connect("imap.gmail.com", "aleksey.borovikov.11@gmail.com", "sup1403f,");
-        Folder folderSent = store.getFolder("[Gmail]/Отправленные");
-        folderSent.open(Folder.READ_ONLY);
-        for (Folder folder : store.getDefaultFolder().list()) {
-            System.out.println("---" + folder.getName());
-            if(folder.getName().equals("[Gmail]")) {
-                for(Folder folder1 : folder.list()) {
-                    System.out.println(folder1.getName());
-                }
-            }
-            String[] attributes = ((IMAPFolder) folder).getAttributes();
-            for (String attr : attributes) {
-                System.out.println(attr);
-            }
+
+        try {
+            Message message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("kavun.bogdan16@gmail.com"));
+            message.setRecipients(
+                    Message.RecipientType.TO, InternetAddress.parse("ewrr_96@mail.ru")
+            );
+            message.setSubject("Subj");
+
+            MimeBodyPart mimeBodyPart = new MimeBodyPart();
+            mimeBodyPart.setContent("Htmlcontent", "text/html");
+
+            Multipart multipart = new MimeMultipart();
+            multipart.addBodyPart(mimeBodyPart);
+
+            message.setContent(multipart);
+            Transport.send(message);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+//        session.setDebug(false);
+//        Store store = session.getStore("imaps");
+//        store.connect("imap.gmail.com", "aleksey.borovikov.11@gmail.com", "sup1403f,");
+//        Folder folderSent = store.getFolder("[Gmail]/Отправленные");
+//        folderSent.open(Folder.READ_ONLY);
+//        for (Folder folder : store.getDefaultFolder().list()) {
+//            System.out.println("---" + folder.getName());
+//            if(folder.getName().equals("[Gmail]")) {
+//                for(Folder folder1 : folder.list()) {
+//                    System.out.println(folder1.getName());
+//                }
+//            }
+//            String[] attributes = ((IMAPFolder) folder).getAttributes();
+//            for (String attr : attributes) {
+//                System.out.println(attr);
+//            }
+//        }
         //
 //        Properties props = new Properties();
 //        props.put("mail.debug", "false");

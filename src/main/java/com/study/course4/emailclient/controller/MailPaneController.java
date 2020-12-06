@@ -87,6 +87,7 @@ public class MailPaneController implements Initializable {
             public void handle(MouseEvent event) {
                 mainPane.getChildren().remove(contentWebView.getParent());
                 mainPane.getChildren().get(0).setVisible(true);
+                mainPane.getChildren().get(0).requestFocus();
             }
         });
     }

@@ -1,4 +1,4 @@
-.button {
+.blue-button {
     -fx-background-color: linear-gradient(to bottom left, #011C9B, #4178EF);
 }
 
@@ -21,3 +21,13 @@
     /*-fx-text-fill: #242d35;*/
     /*-fx-font-size: 12px;*/
 /*}*/
+
+.link {
+    -fx-text-fill: #4178EF;
+    -fx-underline: true;
+}
+
+.current-page {
+    -fx-text-fill: black;
+    -fx-underline: false;
+}

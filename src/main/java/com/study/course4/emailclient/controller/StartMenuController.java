@@ -1,9 +1,11 @@
 package com.study.course4.emailclient.controller;
 
 import com.study.course4.emailclient.mail.MailSession;
+import com.study.course4.emailclient.service.AccountService;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -11,6 +13,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import lombok.SneakyThrows;
 import net.rgielen.fxweaver.core.FxWeaver;
 import net.rgielen.fxweaver.core.FxmlView;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +22,18 @@ import org.springframework.stereotype.Component;
 
 import javax.mail.Store;
 
+import java.awt.print.Paper;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.net.URL;
+import java.nio.file.Files;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import static com.study.course4.emailclient.controller.MainFormController.currentAccount;
 import static com.study.course4.emailclient.controller.MainFormController.mailSession;
+import static com.study.course4.emailclient.controller.MainFormController.mailSessions;
 
 
 @Component
@@ -45,6 +56,9 @@ public class StartMenuController implements Initializable {
 
     @FXML
     private Button loginButton;
+
+    @FXML
+    private Button addAccountButton;
 
     @Autowired
     public StartMenuController(FxWeaver fxWeaver, ApplicationContext context){
@@ -76,6 +90,24 @@ public class StartMenuController implements Initializable {
 
         try {
             mailSession = context.getBean(MailSession.class, email, password);
+            List<String> accounts = AccountService.getAccounts();
+            boolean exists = false;
+            for(String account : accounts) {
+                if(account.substring(0, account.indexOf(" ")).equals(email)) {
+                    System.out.println("equals");
+                    exists = true;
+                }
+            }
+            if(!exists) {
+                FileWriter fw = new FileWriter("src/main/java/com/study/course4/emailclient/files/accounts.txt", true);
+                BufferedWriter bw = new BufferedWriter(fw);
+                bw.write(email + " " + password);
+                bw.newLine();
+                bw.flush();
+                bw.close();
+                mailSessions.put(email + " " + password, mailSession);
+            }
+            currentAccount = email + " " + password;
             Stage stage = ((Stage) loginButton.getScene().getWindow());
             Scene scene = new Scene(fxWeaver.loadView(MainFormController.class));
 
@@ -97,9 +129,11 @@ public class StartMenuController implements Initializable {
     }
 
 
+    @SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        emailTextField.setText("kavun.bogdan16@gmail.com");
-        passwordTextField.setText("tipeK440");
+
     }
+
+
 }

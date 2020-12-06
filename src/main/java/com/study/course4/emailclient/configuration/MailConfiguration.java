@@ -19,10 +19,9 @@ public class MailConfiguration {
     @Scope(BeanDefinition.SCOPE_PROTOTYPE)
     @Qualifier("new_session")
     public MailSession getNewMailSession(String email, String password) {
-        String mailName = email.substring(email.lastIndexOf("@") + 1, email.length());
+        String host = email.substring(email.lastIndexOf("@") + 1, email.length());
         Map<String, String> folderNames;
-        String host;
-        switch(mailName) {
+        switch(host) {
             case "mail.ru":
                 folderNames = Stream.of(new Object[][] {
                         { "inbox", "inbox" },
@@ -30,7 +29,6 @@ public class MailConfiguration {
                         { "drafts", "Черновики" },
                         { "trash", "Корзина" }
                 }).collect(Collectors.toMap(data -> (String) data[0], data -> (String) data[1]));
-                host = "imap.mail.ru";
                 break;
             case "gmail.com":
                 folderNames = Stream.of(new Object[][] {
@@ -39,7 +37,6 @@ public class MailConfiguration {
                         { "drafts", "[Gmail]/Черновики" },
                         { "trash", "[Gmail]/Корзина" }
                 }).collect(Collectors.toMap(data -> (String) data[0], data -> (String) data[1]));
-                host = "imap.gmail.com";
                 break;
             case "yandex.ru":
                 folderNames = Stream.of(new Object[][] {
@@ -48,7 +45,6 @@ public class MailConfiguration {
                         { "drafts", "Черновики" },
                         { "trash", "Корзина" }
                 }).collect(Collectors.toMap(data -> (String) data[0], data -> (String) data[1]));
-                host = "imap.gmail.com";
                 break;
             default:
                 folderNames = null;
