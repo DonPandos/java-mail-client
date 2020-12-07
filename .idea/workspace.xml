@@ -2,44 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44cff2e2-0b86-41d2-bd56-f5410456c116" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/img/addfile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/img/arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/DESCrypt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/CryptService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/SignService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/JavaFxApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/JavaFxApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_pane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_pane.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/main_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/main_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/start_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/start_menu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/write_mail_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/write_mail_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/JavaFxApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/JavaFxApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/SpringBootMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/SpringBootMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/TestH.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/TestH.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/configuration/MailConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/configuration/MailConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailListController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailListController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailPaneController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailPaneController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailPaneController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MailPaneController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MainFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/MainFormController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/StartMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/StartMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/mail/MailSession.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/mail/MailSession.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/attachment_cell.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/attachment_cell.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/mail_list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/mail_list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/controller/WriteMailFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/files/accounts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/files/accounts.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/main_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/main_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/start_menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/start_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/write_mail_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/resources/view/write_mail_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/service/MailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/study/course4/emailclient/service/MailService.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -52,14 +47,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.26906386">
+    <splitter split-orientation="horizontal" split-proportion="0.13725491">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="StartMenuController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java">
+          <file leaf-file-name="CryptService.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/CryptService.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="251">
-                  <caret line="115" column="15" selection-start-line="115" selection-start-column="15" selection-end-line="115" selection-end-column="15" />
+                  <caret line="40" column="55" selection-start-line="37" selection-start-column="9" selection-end-line="40" selection-end-column="55" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -67,41 +62,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="EmailAuthenticator.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/EmailAuthenticator.java">
+          <file leaf-file-name="kavun.bogdan16@gmail.com" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/kavun.bogdan16@gmail.com">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
-                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                <state>
+                  <caret column="23" selection-start-column="23" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MailConfiguration.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java">
+          <file leaf-file-name="RSACrypt.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="294">
-                  <caret line="23" selection-start-line="23" selection-end-line="23" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SpringBootMain.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="JavaFxApplication.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/JavaFxApplication.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="35" selection-start-line="35" selection-end-line="35" />
+                <state relative-caret-position="-94">
+                  <caret line="22" column="98" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="98" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -112,8 +86,8 @@
           <file leaf-file-name="MailService.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="158">
-                  <caret line="96" selection-start-line="96" selection-end-line="96" />
+                <state relative-caret-position="666">
+                  <caret line="47" selection-start-line="47" selection-end-line="47" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -121,11 +95,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MailPaneController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java">
+          <file leaf-file-name="MainFormController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-232">
-                  <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+                <state relative-caret-position="-17">
+                  <caret line="150" column="12" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="12" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MailListController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="177">
+                  <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -136,22 +119,40 @@
           <file leaf-file-name="WriteMailFormController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2078">
-                  <caret line="141" column="63" selection-start-line="141" selection-start-column="56" selection-end-line="141" selection-end-column="63" />
+                <state relative-caret-position="83">
+                  <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="folder_list_cell.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/folder_list_cell.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="378">
+                  <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SignService.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/SignService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="85">
+                  <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3578#3579#0" expanded="true" />
-                    <element signature="e#3640#3641#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="MainFormController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java">
+          <file leaf-file-name="attachment_cell_write_email.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+                <state relative-caret-position="231">
+                  <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
                 </state>
               </provider>
             </entry>
@@ -160,58 +161,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="MainFormController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="MainFormController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="741">
-                  <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+                <state relative-caret-position="338">
+                  <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="account_cell.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/account_cell.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
+          <file leaf-file-name="MailService.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MailListViewCell.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/MailListViewCell.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="34" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FolderListViewCell.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/FolderListViewCell.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="630">
-                  <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main_form.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/main_form.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
-                  <caret line="17" column="143" selection-start-line="17" selection-start-column="143" selection-end-line="17" selection-end-column="143" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="AccountsListViewCell.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/AccountsListViewCell.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="16" selection-start-line="13" selection-end-line="16" />
+                <state relative-caret-position="216">
+                  <caret line="77" selection-start-line="77" selection-end-line="77" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -219,11 +182,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/AccountService.java">
+          <file leaf-file-name="TestH.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+                <state relative-caret-position="10">
+                  <caret line="35" selection-start-line="35" selection-end-line="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MailPaneController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="822">
+                  <caret line="99" column="62" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -231,21 +203,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="attachment_cell.fxml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
+          <file leaf-file-name="DESCrypt.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/DESCrypt.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="WriteMailFormController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1491">
-                  <caret line="71" selection-start-line="70" selection-end-line="71" />
+                <state relative-caret-position="133">
+                  <caret line="41" selection-start-line="41" selection-end-line="41" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#917#918#0" expanded="true" />
+                    <element signature="e#1003#1004#0" expanded="true" />
+                    <element signature="e#1114#1115#0" expanded="true" />
+                    <element signature="e#1176#1177#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -253,8 +222,32 @@
           <file leaf-file-name="MailSession.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="21">
+                <state relative-caret-position="210">
                   <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="44" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="RSACrypt.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="534">
+                  <caret line="82" selection-start-line="82" selection-end-line="82" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CryptService.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/CryptService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="218">
+                  <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -279,6 +272,9 @@
     <findStrings>
       <find>MimeMessage</find>
       <find>handleOn</find>
+      <find>Ы</find>
+      <find>System.out.println</find>
+      <find>System</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\ewrr_\Desktop\emailclient</dir>
@@ -297,7 +293,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java" />
         <option value="$PROJECT_DIR$/src/main/resources/view/start_menu.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/EmailAuthenticator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/Test.java" />
@@ -312,19 +307,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/MailListViewCell.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_list.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/mail_pane.fxml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/Mail.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/start_menu.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/write_mail_form.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell__write_email.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/account_cell.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/AccountService.java" />
@@ -334,8 +324,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/ewrr_96@mail.ru" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/bogdant99@mail.ru" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/DESCrypt.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/SignService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/CryptService.java" />
       </list>
     </option>
   </component>
@@ -355,9 +357,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="679" />
-    <option name="y" value="144" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="1075" />
+    <option name="y" value="286" />
     <option name="width" value="976" />
     <option name="height" value="1056" />
   </component>
@@ -434,7 +436,36 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="crypt" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="emailclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
               <item name="files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="emailclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="rsapriv" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="emailclient" type="b2602c69:ProjectViewProjectNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="emailclient" type="462c0819:PsiDirectoryNode" />
+              <item name="files" type="462c0819:PsiDirectoryNode" />
+              <item name="rsapriv" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="emailclient" type="b2602c69:ProjectViewProjectNode" />
@@ -701,15 +732,15 @@
       <workItem from="1607001022685" duration="2011000" />
       <workItem from="1607078944652" duration="5085000" />
       <workItem from="1607187575446" duration="9725000" />
-      <workItem from="1607247319622" duration="3917000" />
+      <workItem from="1607247319622" duration="40687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154885000" />
+    <option name="totallyTimeSpent" value="191655000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Key Promoter X" order="6" />
@@ -725,16 +756,16 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49895832" weight="0.39789474" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.47083333" weight="0.45052633" />
-      <window_info anchor="right" id="Codota" order="3" weight="5.2083336E-4" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.47083333" weight="0.44947368" />
+      <window_info anchor="right" id="Codota" order="3" visible="true" weight="5.2083336E-4" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5911458" visible="true" weight="0.023133544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5911458" visible="true" weight="0.30809674" />
       <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49895832" weight="0.08412198" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15989584" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49895832" weight="0.14826499" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30833334" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -758,97 +789,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="777">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/Mail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="43" selection-start-column="43" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/JavaFxApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/pojo/FolderPojo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/send_email_form.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="42" column="3" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/folder_list_cell.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/FolderListViewCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/MailListViewCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1449">
-          <caret line="69" column="31" selection-start-line="68" selection-start-column="8" selection-end-line="69" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
@@ -888,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/image.png" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_241/javafx-src.zip!/javafx/scene/layout/GridPane.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -921,26 +854,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1810">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/write_mail_form.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1008">
           <caret line="48" selection-start-line="48" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -983,34 +901,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="48" column="69" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1617">
-          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/folder_list_cell.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/account_cell.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
@@ -1037,21 +927,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/AccountService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/accounts.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/component/AccountsListViewCell.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1067,23 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="273">
           <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1106,16 +972,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/SpringBootMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/configuration/MailConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/EmailAuthenticator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="252">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/value@mail.ru">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/qwe@mail.ru">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/q@mail.ru">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/encdeskey">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="344" lean-forward="true" selection-start-column="344" selection-end-column="344" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/mail/MailSession.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
+        <state relative-caret-position="210">
           <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1123,37 +1029,135 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/ewrr_96@mail.ru">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="24" selection-end-column="848" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/bogdant99@mail.ru">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1491">
-          <caret line="71" selection-start-line="70" selection-end-line="71" />
+        <state>
+          <caret column="74" lean-forward="true" selection-start-column="74" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/StartMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="115" column="15" selection-start-line="115" selection-start-column="15" selection-end-line="115" selection-end-column="15" />
+        <state relative-caret-position="161">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/DESCrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#917#918#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/AttachmentCellWriteEmailController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="117" column="30" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/files/kavun.bogdan16@gmail.com/crypt/rsapriv/kavun.bogdan16@gmail.com">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/MailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="77" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/attachment_cell_write_email.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/resources/view/folder_list_cell.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/TestH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/WriteMailFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="164" column="60" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/crypt/RSACrypt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/SignService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="61" column="28" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1162,8 +1166,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MainFormController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+        <state relative-caret-position="338">
+          <caret line="243" column="9" selection-start-line="243" selection-start-column="9" selection-end-line="243" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/controller/MailPaneController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="822">
+          <caret line="99" column="62" selection-start-line="99" selection-start-column="62" selection-end-line="99" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/study/course4/emailclient/service/CryptService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

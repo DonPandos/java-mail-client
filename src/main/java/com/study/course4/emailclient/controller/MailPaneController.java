@@ -1,6 +1,8 @@
 package com.study.course4.emailclient.controller;
 
 import com.study.course4.emailclient.mail.Mail;
+import com.study.course4.emailclient.service.CryptService;
+import com.study.course4.emailclient.service.SignService;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,11 +17,13 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.web.WebView;
+import javafx.util.Pair;
 import lombok.SneakyThrows;
 
 import javax.activation.DataSource;
 import java.io.File;
 import java.net.URL;
+import java.util.List;
 import java.util.Random;
 import java.util.ResourceBundle;
 
@@ -44,6 +48,9 @@ public class MailPaneController implements Initializable {
     private Label subjectLabel;
 
     @FXML
+    private Label errorLabel;
+
+    @FXML
     private WebView contentWebView;
 
     @FXML
@@ -54,10 +61,27 @@ public class MailPaneController implements Initializable {
 
     private Mail mail;
     private AnchorPane mainPane;
-
+    private boolean isSigned;
+    private boolean sign;
     public MailPaneController(Mail mail, AnchorPane mainPane) {
         this.mail = mail;
         this.mainPane = mainPane;
+        this.isSigned = false;
+        for(DataSource attachment : mail.getAttachments()) {
+            if(attachment.getName().equals("encdeskey")) {
+                Pair<String, List<DataSource>> pair = CryptService.decrypt(mail.getContent(), mail.getAttachments(), this.mail.getFromEmail());
+                this.mail.setContent(pair.getKey());
+                this.mail.setAttachments(pair.getValue());
+                break;
+            }
+        }
+        for(DataSource attachment : mail.getAttachments()) {
+            if(attachment.getName().equals("pubandsign")){
+                this.isSigned = true;
+                this.sign = SignService.checkSign(mail.getContent(), mail.getAttachments());
+                break;
+            }
+        }
     }
 
     @SneakyThrows
@@ -71,6 +95,10 @@ public class MailPaneController implements Initializable {
         subjectLabel.setText(mail.getSubject());
         fromEmailLabel.setText(mail.getFromEmail());
         contentWebView.getEngine().loadContent(mail.getContent());
+        if(isSigned) {
+            if(sign) errorLabel.setText("Письмо имеет ЭЦП. ЭЦП валидна.");
+            else errorLabel.setText("Письмо имеет ЭЦП. ЭЦП не валидна.");
+        }
         int counter = 1;
         for(DataSource dataSource : mail.getAttachments()) {
             AttachmentCellController attachmentCellController = new AttachmentCellController(dataSource);

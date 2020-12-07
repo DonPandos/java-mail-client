@@ -40,6 +40,6 @@
          </font>
       </JFXButton>
       <JFXTextField fx:id="toEmailKeyTextField" layoutX="1250.0" layoutY="25.0" prefHeight="25.0" prefWidth="300.0" promptText="Почтовый адрес" />
-      <JFXTextArea layoutX="1250.0" layoutY="114.0" prefHeight="185.0" prefWidth="300.0" text="qweqweqwe" />
+      <JFXTextArea fx:id="keyGenerateTextArea" layoutX="1250.0" layoutY="114.0" prefHeight="185.0" prefWidth="300.0" />
    </children>
 </AnchorPane>

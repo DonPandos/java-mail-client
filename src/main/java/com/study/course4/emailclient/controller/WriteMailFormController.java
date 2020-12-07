@@ -1,8 +1,13 @@
 package com.study.course4.emailclient.controller;
 
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
+import com.study.course4.emailclient.crypt.RSACrypt;
 import com.study.course4.emailclient.mail.MailSession;
+import com.study.course4.emailclient.service.CryptService;
 import com.study.course4.emailclient.service.MailService;
+import com.study.course4.emailclient.service.SignService;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +22,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.web.HTMLEditor;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 import lombok.SneakyThrows;
 
 import javax.activation.DataSource;
@@ -26,6 +32,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static com.study.course4.emailclient.controller.MainFormController.mailSession;
 
 public class WriteMailFormController implements Initializable {
 
@@ -56,8 +64,16 @@ public class WriteMailFormController implements Initializable {
     @FXML
     private FlowPane attachmentPane;
 
+    @FXML
+    private JFXCheckBox cryptCheckBox;
+
+    @FXML
+    private JFXCheckBox signCheckBox;
+
+    @FXML
+    private JFXTextArea pubKeyTextArea;
+
     private AnchorPane mainPane;
-    private MailSession mailSession;
     private MailService mailService;
     private List<DataSource> attachments;
     private String toEmail;
@@ -68,7 +84,6 @@ public class WriteMailFormController implements Initializable {
 
     public WriteMailFormController(AnchorPane mainPane, MailSession mailSession, MailService mailService) {
         this.mainPane = mainPane;
-        this.mailSession = mailSession;
         this.mailService = mailService;
         attachments = new ArrayList<>();
     }
@@ -79,7 +94,6 @@ public class WriteMailFormController implements Initializable {
         this.content = content;
         this.attachments = attachments;
         this.mainPane = mainPane;
-        this.mailSession = mailSession;
         this.mailService = mailService;
     }
 
@@ -119,6 +133,13 @@ public class WriteMailFormController implements Initializable {
                 handleOnAddAttachmentButtonClick();
             }
         });
+
+        cryptCheckBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                handleOnCryptCheckBoxClick();
+            }
+        });
     }
 
     public void handleOnBackButtonClick() {
@@ -139,7 +160,26 @@ public class WriteMailFormController implements Initializable {
             errorLabel.setText(errors.toString());
             return;
         }
-        boolean result = mailService.sendEmail(toEmail, subject, htmlContent, attachments, mailSession);
+
+        if(signCheckBox.isSelected()) {
+            SignService.createSign(htmlContent, attachments);
+        }
+
+        if(cryptCheckBox.isSelected()) {
+            String rsaPubKeyString = pubKeyTextArea.getText();
+            if(!RSACrypt.isPublicRsaKey(rsaPubKeyString)) {
+                errorLabel.setText("Неверный RSA ключ");
+                return;
+            }
+
+            Pair<String, List<DataSource>> pair = CryptService.encrypt(htmlContent, attachments, rsaPubKeyString);
+            boolean result = mailService.sendEmail(toEmail, subject, pair.getKey(), pair.getValue());
+            if(result) errorLabel.setText("Письмо успешно доставлено!");
+            else errorLabel.setText("При отправке письма возникли ошибки.");
+            return;
+        }
+
+        boolean result = mailService.sendEmail(toEmail, subject, htmlContent, attachments);
         if(result) errorLabel.setText("Письмо успешно доставлено!");
         else errorLabel.setText("При отправке письма возникли ошибки.");
     }
@@ -155,6 +195,14 @@ public class WriteMailFormController implements Initializable {
         );
         loader.setController(attachmentCellWriteEmailController);
             attachmentPane.getChildren().add(loader.load());
+    }
 
+    public void handleOnCryptCheckBoxClick() {
+        boolean value = cryptCheckBox.isSelected();
+        if(value) {
+            pubKeyTextArea.setDisable(false);
+        } else {
+            pubKeyTextArea.setDisable(true);
+        }
     }
 }

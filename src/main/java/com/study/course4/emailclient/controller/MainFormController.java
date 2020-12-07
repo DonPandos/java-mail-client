@@ -2,10 +2,12 @@ package com.study.course4.emailclient.controller;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.controls.JFXTextField;
 import com.study.course4.emailclient.component.AccountsListViewCell;
 import com.study.course4.emailclient.component.FolderListViewCell;
 import com.study.course4.emailclient.component.MailListViewCell;
+import com.study.course4.emailclient.crypt.RSACrypt;
 import com.study.course4.emailclient.mail.Mail;
 import com.study.course4.emailclient.mail.MailSession;
 import com.study.course4.emailclient.pojo.FolderPojo;
@@ -57,6 +59,9 @@ public class MainFormController implements Initializable {
 
     @FXML
     JFXTextField toEmailKeyTextField;
+
+    @FXML
+    JFXTextArea keyGenerateTextArea;
 
     @FXML
     AnchorPane mainPane;
@@ -157,15 +162,15 @@ public class MainFormController implements Initializable {
         if(!accountClicked.equals(currentAccount)) {
             currentAccount = accountClicked;
             MailSession mailSession;
-            if(mailSessions.get(accountClicked) == null) {
+            if(mailSessions.get(currentAccount) == null) {
                mailSession = context.getBean(MailSession.class,
                        currentAccount.substring(0, currentAccount.indexOf(" ")),
                        currentAccount.substring(currentAccount.indexOf(" ") + 1, currentAccount.length()));
-               mailSessions.replace(accountClicked, mailSession);
+               mailSessions.replace(currentAccount, mailSession);
             } else {
                 mailSession = mailSessions.get(accountClicked);
             }
-            this.mailSession = mailSession;
+            this.mailSession = mailSessions.get(currentAccount);
             MailListController mailListController = new MailListController(mailSession.getFolder("inbox"), 1, mailService, mailSession, mainPane);
             FXMLLoader loader = new FXMLLoader(
                     getClass().getResource("../resources/view/mail_list.fxml")
@@ -198,7 +203,6 @@ public class MainFormController implements Initializable {
         mainPane.getScene().getWindow().hide();
         stage.show();
 
-        //stage.initStyle(StageStyle.UNDECORATED);
     }
 
     @SneakyThrows
@@ -235,8 +239,10 @@ public class MainFormController implements Initializable {
     public void onKeyGenerateButtonClick() {
         String email = toEmailKeyTextField.getText();
         if(!email.matches("^.*@(mail[.]ru|gmail[.]com|yandex[.]ru)$")) {
-            toEmailKeyTextField.setText("Неподходящий email адрес. \n");
+            keyGenerateTextArea.setText("Неподходящий email адрес. \n");
             return;
         }
+        keyGenerateTextArea.setText(RSACrypt.generatePair(mailSession.getEmail(), email));
+
     }
 }

@@ -13,9 +13,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import static com.study.course4.emailclient.controller.WriteMailFormController.currCol;
-import static com.study.course4.emailclient.controller.WriteMailFormController.currRow;
-
 public class AttachmentCellWriteEmailController implements Initializable {
     @FXML
     private Label filenameLabel;

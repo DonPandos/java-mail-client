@@ -51,5 +51,6 @@
             <Image url="@../img/back.png" />
          </image>
       </ImageView>
+      <Label fx:id="errorLabel" layoutX="80.0" layoutY="12.0" prefHeight="17.0" prefWidth="800.0" />
    </children>
 </AnchorPane>

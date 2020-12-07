@@ -18,6 +18,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
+import static com.study.course4.emailclient.controller.MainFormController.mailSession;
+import static com.study.course4.emailclient.controller.MainFormController.mailSessions;
+
 @Service
 public class MailService {
 
@@ -31,10 +34,8 @@ public class MailService {
         int messagesEnd = (page * MAILS_COUNT_ON_PAGE) - 1 > folder.getMessageCount() ? folder.getMessageCount() : (page * MAILS_COUNT_ON_PAGE) - 1;
         int messageCount = folder.getMessageCount();
         for (int i = messageCount - messageStart + 1; i >= messageCount - messagesEnd + 1; i--) {
-            System.out.println("message " + i);
             Mail mail = new Mail();
             Message message = folder.getMessage(i);
-            //String from = message.getFrom()[0].toString().trim();
             Address[] from = message.getFrom();
             mail.setFromName(((InternetAddress) from[0]).getPersonal());
             mail.setFromEmail(((InternetAddress) from[0]).getAddress());
@@ -70,7 +71,7 @@ public class MailService {
         return ((InternetAddress) message.getReplyTo()[0]).getAddress();
     }
 
-    public boolean sendEmail(String toEmail, String subject, String htmlContent, List<DataSource> dataSources, MailSession mailSession) {
+    public boolean sendEmail(String toEmail, String subject, String htmlContent, List<DataSource> dataSources) {
         try {
             Message message = new MimeMessage(mailSession.getSession());
             message.setFrom(new InternetAddress(mailSession.getEmail(), mailSession.getName()));
@@ -93,7 +94,6 @@ public class MailService {
             }
 
             message.setContent(multipart);
-            System.out.println(((InternetAddress)message.getFrom()[0]).getAddress());
             Transport.send(message, mailSession.getEmail(), mailSession.getPassword());
             //Transport.send(message);
 
